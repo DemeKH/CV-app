@@ -1,15 +1,14 @@
-import AddEducation from "./AddEducation";
-import AddExperience from "./AddExperience";
-import AddGenInformation from "./AddGenInformation";
+import { useState } from "react";
+import AddInfoForm from "./components/AddInfoForm";
 
 function App() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="app">
-      <AddGenInformation />
-
-      <AddEducation />
-
-      <AddExperience />
+      <AddInfoForm isOpen={isFormOpen} />
+      <button onClick={() => setIsFormOpen(true)}>Edit</button>
+      <button onClick={() => setIsFormOpen(false)}>submit</button>
     </div>
   );
 }
