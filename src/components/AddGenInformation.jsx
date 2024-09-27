@@ -1,11 +1,13 @@
-import { useState } from "react";
-
-function AddGenInformation() {
-  const [firstName, setfirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("false");
-  const [phoneNum, setPhoneNum] = useState("");
-
+function AddGenInformation({
+  firstName,
+  lastName,
+  email,
+  phoneNum,
+  setfirstName,
+  setLastName,
+  setPhoneNum,
+  setEmail,
+}) {
   return (
     <div className="general-info info">
       <div className="names-input input">

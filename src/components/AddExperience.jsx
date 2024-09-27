@@ -1,12 +1,15 @@
-import { useState } from "react";
-
-export function AddExperience() {
-  const [companyName, setCompanyName] = useState("");
-  const [positionAtCompany, setPositionAtCompany] = useState("");
-  const [responsibilities, setResponsibilities] = useState("");
-  const [companyDateFrom, setCompanyDateFrom] = useState("");
-  const [companyDateTo, setCompanyDateTo] = useState("");
-
+export function AddExperience({
+  companyName,
+  setCompanyName,
+  positionAtCompany,
+  setPositionAtCompany,
+  responsibilities,
+  setResponsibilities,
+  companyDateFrom,
+  setCompanyDateFrom,
+  companyDateTo,
+  setCompanyDateTo,
+}) {
   return (
     <div className="experience-info info">
       <div className="input">

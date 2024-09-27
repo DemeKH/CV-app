@@ -1,11 +1,13 @@
-import { useState } from "react";
-
-export function AddEducation() {
-  const [schoolName, setSchoolName] = useState("");
-  const [titleOfStudy, setTitleOfStudy] = useState("");
-  const [studyDateFrom, setstudyDateFrom] = useState("");
-  const [studyDateTo, setstudyDateTo] = useState("");
-
+export function AddEducation({
+  schoolName,
+  setSchoolName,
+  titleOfStudy,
+  setTitleOfStudy,
+  studyDateFrom,
+  setstudyDateFrom,
+  studyDateTo,
+  setstudyDateTo,
+}) {
   return (
     <div className="education-info info">
       <div className="input">
