@@ -2,15 +2,16 @@ import AddEducation from "./AddEducation";
 import AddExperience from "./AddExperience";
 import AddGenInformation from "./AddGenInformation";
 
-
 function App() {
-  return(
+  return (
     <div className="app">
-      <AddGenInformation/>
-      <AddEducation/>
-      <AddExperience/>
+      <AddGenInformation />
+
+      <AddEducation />
+
+      <AddExperience />
     </div>
   );
 }
 
-export default App
+export default App;

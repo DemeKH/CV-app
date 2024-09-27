@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+.info {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+input {
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+.name-input {
+  width: 150px;
+}
