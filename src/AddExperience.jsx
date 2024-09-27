@@ -11,7 +11,7 @@ export function AddExperience() {
       </div>
       <div className="input">
         <p>Responsibilities:</p>
-        <input type="text" />
+        <textarea></textarea>
       </div>
       <div className="input">
         <p>Date from:</p>

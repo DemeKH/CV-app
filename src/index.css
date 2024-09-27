@@ -22,6 +22,12 @@ input {
   border-radius: 6px;
   border: 1px solid black;
 }
+textarea {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
 .name-input {
   width: 150px;
 }
