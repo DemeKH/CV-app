@@ -71,7 +71,24 @@ function App() {
           />
         </AddInfoForm>
       )}
-      {!isFormOpen && <CV setIsFormOpen={setIsFormOpen} />}
+      {!isFormOpen && (
+        <CV
+          setIsFormOpen={setIsFormOpen}
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
+          phoneNum={phoneNum}
+          schoolName={schoolName}
+          titleOfStudy={titleOfStudy}
+          studyDateFrom={studyDateFrom}
+          studyDateTo={studyDateTo}
+          companyName={companyName}
+          positionAtCompany={positionAtCompany}
+          responsibilities={responsibilities}
+          companyDateFrom={companyDateFrom}
+          companyDateTo={companyDateTo}
+        />
+      )}
     </div>
   );
 }

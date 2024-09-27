@@ -29,7 +29,9 @@ export function AddEducation({
       <div className="input">
         <p>Date from:</p>
         <input
-          type="date"
+          type="number"
+          min="1900"
+          max="2099"
           onChange={(e) => setstudyDateFrom(e.target.value)}
           value={studyDateFrom}
         />
@@ -37,7 +39,9 @@ export function AddEducation({
       <div className="input">
         <p>Date to:</p>
         <input
-          type="date"
+          type="number"
+          min="1900"
+          max="2099"
           onChange={(e) => setstudyDateTo(e.target.value)}
           value={studyDateTo}
         />

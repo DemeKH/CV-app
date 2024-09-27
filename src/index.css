@@ -44,16 +44,6 @@ form {
 form h1 {
   margin: 20px auto;
 }
-
-.cv {
-  display: flex;
-  flex-direction: column;
-  margin-top: auto;
-  width: 500px;
-  height: 700px;
-  border: 1px solid rgb(219, 219, 219);
-  margin: 0px auto;
-}
 .main-btn {
   margin: 30px auto;
   font-size: 1.3rem;
@@ -61,4 +51,28 @@ form h1 {
   background-color: white;
   border-radius: 15px;
   cursor: pointer;
+}
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: auto;
+  width: 500px;
+  height: 700px;
+  border: 1px solid rgb(219, 219, 219);
+  margin: 0px auto;
+}
+.cv h1 {
+  text-align: center;
+  margin: 10px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.section {
+  border-bottom: 1px solid black;
 }

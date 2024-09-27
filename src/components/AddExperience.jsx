@@ -38,7 +38,9 @@ export function AddExperience({
       <div className="input">
         <p>Date from:</p>
         <input
-          type="date"
+          type="number"
+          min="1900"
+          max="2024"
           onChange={(e) => setCompanyDateFrom(e.target.value)}
           value={companyDateFrom}
         />
@@ -46,7 +48,9 @@ export function AddExperience({
       <div className="input">
         <p>Date to:</p>
         <input
-          type="date"
+          type="number"
+          min="1900"
+          max="2024"
           onChange={(e) => setCompanyDateTo(e.target.value)}
           value={companyDateTo}
         />
