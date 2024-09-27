@@ -1,17 +1,25 @@
 // Modal.js
-import React from "react";
 import AddGenInformation from "./AddGenInformation";
 import AddExperience from "./AddExperience";
 import AddEducation from "./AddEducation";
 
-const AddInfoForm = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
+const AddInfoForm = ({ setIsFormOpen }) => {
   return (
     <>
-      <AddGenInformation />
-      <AddEducation />
-      <AddExperience />
+      <form>
+        <h1>Add Information</h1>
+        <AddGenInformation />
+        <AddEducation />
+        <AddExperience />
+        <input
+          type="submit"
+          onClick={(e) => {
+            e.preventDefault();
+            setIsFormOpen(false);
+          }}
+          className="main-btn"
+        />
+      </form>
     </>
   );
 };

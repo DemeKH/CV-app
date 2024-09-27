@@ -6,6 +6,12 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
 }
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .info {
   border-bottom: 1px solid black;
   padding: 10px;
@@ -30,4 +36,27 @@ textarea {
 }
 .name-input {
   width: 150px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form h1 {
+  margin: 20px auto;
+}
+
+.cv {
+  margin-top: auto;
+  width: 500px;
+  height: 700px;
+  border: 1px solid rgb(219, 219, 219);
+  margin: 0px auto;
+}
+.main-btn {
+  margin: 30px auto;
+  font-size: 1.3rem;
+  padding: 6px 15px;
+  background-color: white;
+  border-radius: 15px;
+  cursor: pointer;
 }
