@@ -3,7 +3,7 @@ import AddInfoForm from "./components/AddInfoForm";
 import CV from "./components/CV";
 
 function App() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(true);
 
   return (
     <div className="app ">
