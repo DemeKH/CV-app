@@ -6,7 +6,7 @@ import AddEducation from "./AddEducation";
 const AddInfoForm = ({ setIsFormOpen }) => {
   return (
     <>
-      <form>
+      <form className="border-black border-2 border-solid">
         <h1>Add Information</h1>
         <AddGenInformation />
         <AddEducation />

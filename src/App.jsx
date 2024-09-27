@@ -6,7 +6,7 @@ function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <div className="app">
+    <div className="app ">
       {isFormOpen && <AddInfoForm setIsFormOpen={setIsFormOpen} />}
       {!isFormOpen && <CV setIsFormOpen={setIsFormOpen} />}
     </div>
