@@ -2,11 +2,17 @@ function AddGenInformation() {
     return ( 
         <div className="general-info">
             <div className="names-input">
-            <input type="text" placeholder="First Name"/>
-            <input type="text" placeholder="Last Name"/>
+            <p>First Name</p>
+            <input type="text" />
+
+            <p>Last Name</p>
+            <input type="text" />
                 
             </div>
+            <p>Email:</p>
             <input type="email"/>
+
+            <p>Phone number:</p>
             <input type="number"/>
         </div>
      );
