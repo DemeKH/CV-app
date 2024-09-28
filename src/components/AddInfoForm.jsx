@@ -1,7 +1,7 @@
 const AddInfoForm = ({ children }) => {
   return (
     <>
-      <form>{children}</form>
+      <form className="bg-black p-4">{children}</form>
     </>
   );
 };
