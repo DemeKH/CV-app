@@ -27,7 +27,7 @@ function App() {
   const [inputPageIndex, setInputPageIndex] = useState(0);
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex flex-col justify-center items-center h-screen">
       {isFormOpen && (
         <AddInfoForm>
           <h1 className="col-span-3 text-orange-400 text-3xl text-center m-5">
