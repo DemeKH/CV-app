@@ -25,44 +25,46 @@ function App() {
   const [studyDateTo, setStudyDateTo] = useState("");
 
   return (
-    <div className="app ">
+    <div className="flex justify-center items-center h-screen">
       {isFormOpen && (
         <AddInfoForm>
-          <h1 className="text-white text-3xl text-center mb-4">
+          <h1 className="col-span-3 text-orange-400 text-3xl text-center m-5">
             Add Information
           </h1>
-          <AddGenInformation
-            firstName={firstName}
-            lastName={lastName}
-            email={email}
-            phoneNum={phoneNum}
-            setfirstName={setfirstName}
-            setLastName={setLastName}
-            setPhoneNum={setPhoneNum}
-            setEmail={setEmail}
-          />
-          <AddEducation
-            schoolName={schoolName}
-            setSchoolName={setSchoolName}
-            titleOfStudy={titleOfStudy}
-            setTitleOfStudy={setTitleOfStudy}
-            studyDateFrom={studyDateFrom}
-            setstudyDateFrom={setStudyDateFrom}
-            studyDateTo={studyDateTo}
-            setstudyDateTo={setStudyDateTo}
-          />
-          <AddExperience
-            companyName={companyName}
-            setCompanyName={setCompanyName}
-            positionAtCompany={positionAtCompany}
-            setPositionAtCompany={setPositionAtCompany}
-            responsibilities={responsibilities}
-            setResponsibilities={setResponsibilities}
-            companyDateFrom={companyDateFrom}
-            setCompanyDateFrom={setCompanyDateFrom}
-            companyDateTo={companyDateTo}
-            setCompanyDateTo={setCompanyDateTo}
-          />
+          <div className="md:flex gap-5">
+            <AddGenInformation
+              firstName={firstName}
+              lastName={lastName}
+              email={email}
+              phoneNum={phoneNum}
+              setfirstName={setfirstName}
+              setLastName={setLastName}
+              setPhoneNum={setPhoneNum}
+              setEmail={setEmail}
+            />
+            <AddEducation
+              schoolName={schoolName}
+              setSchoolName={setSchoolName}
+              titleOfStudy={titleOfStudy}
+              setTitleOfStudy={setTitleOfStudy}
+              studyDateFrom={studyDateFrom}
+              setstudyDateFrom={setStudyDateFrom}
+              studyDateTo={studyDateTo}
+              setstudyDateTo={setStudyDateTo}
+            />
+            <AddExperience
+              companyName={companyName}
+              setCompanyName={setCompanyName}
+              positionAtCompany={positionAtCompany}
+              setPositionAtCompany={setPositionAtCompany}
+              responsibilities={responsibilities}
+              setResponsibilities={setResponsibilities}
+              companyDateFrom={companyDateFrom}
+              setCompanyDateFrom={setCompanyDateFrom}
+              companyDateTo={companyDateTo}
+              setCompanyDateTo={setCompanyDateTo}
+            />
+          </div>
 
           <button
             type="submit"
@@ -70,7 +72,7 @@ function App() {
               e.preventDefault();
               setIsFormOpen(false);
             }}
-            className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="col-span-3 text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Submit
           </button>

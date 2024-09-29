@@ -10,52 +10,50 @@ function AddGenInformation({
 }) {
   return (
     <div className=" grid grid-cols-2 grid-rows-3 gap-x-5">
-      <div className="mb-5">
-        <label className="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      <div className="">
+        <label className="mb-2 text-sm font-medium text-black">
           First name:
         </label>
         <input
           type="text"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-white text-orange-400 font-medium border border-orange-400 hover:bg-orange-400 hover:text-white hover:placeholder:text-white text-sm rounded-lg block w-full p-2.5 focus:outline-none"
           placeholder="e.g. Demetre"
           value={firstName}
           onChange={(e) => setfirstName(e.target.value)}
           required
         />
       </div>
-      <div className="mb-5">
-        <label className="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      <div className="">
+        <label className="mb-2 text-sm font-medium text-black">
           Last name:
         </label>
         <input
           type="text"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-white text-orange-400 font-medium border border-orange-400 hover:bg-orange-400 hover:text-white hover:placeholder:text-white text-sm rounded-lg block w-full p-2.5 focus:outline-none"
           placeholder="e.g. Khvedelidze"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           required
         />
       </div>
-      <div className="mb-5 col-span-2">
-        <label className="mb-2 text-sm font-medium text-gray-900 dark:text-white">
-          Email:
-        </label>
+      <div className=" col-span-2">
+        <label className="mb-2 text-sm font-medium text-black"> Email:</label>
         <input
           type="email"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-white text-orange-400 font-medium border border-orange-400 hover:bg-orange-400 hover:text-white hover:placeholder:text-white text-sm rounded-lg block w-full p-2.5 focus:outline-none"
           placeholder="example@gmail.com"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           required
         />
       </div>
-      <div className="mb-5 col-span-2">
-        <label className="mb-2 text-sm font-medium text-gray-900 dark:text-white">
+      <div className=" col-span-2">
+        <label className="mb-2 text-sm font-medium text-black">
           Phone number:
         </label>
         <input
           type="number"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="bg-white text-orange-400 font-medium border border-orange-400 hover:bg-orange-400 hover:text-white hover:placeholder:text-white text-sm rounded-lg block w-full p-2.5 focus:outline-none"
           placeholder="e.g. 558236914"
           onChange={(e) => setPhoneNum(Number(e.target.value))}
           value={phoneNum}
