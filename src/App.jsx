@@ -24,6 +24,8 @@ function App() {
   const [studyDateFrom, setStudyDateFrom] = useState("");
   const [studyDateTo, setStudyDateTo] = useState("");
 
+  const [inputPageIndex, setInputPageIndex] = useState(0);
+
   return (
     <div className="flex justify-center items-center h-screen">
       {isFormOpen && (
@@ -31,51 +33,135 @@ function App() {
           <h1 className="col-span-3 text-orange-400 text-3xl text-center m-5">
             Add Information
           </h1>
-          <div className="md:flex gap-5">
-            <AddGenInformation
-              firstName={firstName}
-              lastName={lastName}
-              email={email}
-              phoneNum={phoneNum}
-              setfirstName={setfirstName}
-              setLastName={setLastName}
-              setPhoneNum={setPhoneNum}
-              setEmail={setEmail}
-            />
-            <AddEducation
-              schoolName={schoolName}
-              setSchoolName={setSchoolName}
-              titleOfStudy={titleOfStudy}
-              setTitleOfStudy={setTitleOfStudy}
-              studyDateFrom={studyDateFrom}
-              setstudyDateFrom={setStudyDateFrom}
-              studyDateTo={studyDateTo}
-              setstudyDateTo={setStudyDateTo}
-            />
-            <AddExperience
-              companyName={companyName}
-              setCompanyName={setCompanyName}
-              positionAtCompany={positionAtCompany}
-              setPositionAtCompany={setPositionAtCompany}
-              responsibilities={responsibilities}
-              setResponsibilities={setResponsibilities}
-              companyDateFrom={companyDateFrom}
-              setCompanyDateFrom={setCompanyDateFrom}
-              companyDateTo={companyDateTo}
-              setCompanyDateTo={setCompanyDateTo}
-            />
+          {inputPageIndex === 0 && (
+            <>
+              <div className="">
+                <AddGenInformation
+                  firstName={firstName}
+                  lastName={lastName}
+                  email={email}
+                  phoneNum={phoneNum}
+                  setfirstName={setfirstName}
+                  setLastName={setLastName}
+                  setPhoneNum={setPhoneNum}
+                  setEmail={setEmail}
+                />
+              </div>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setInputPageIndex((prev) => prev + 1);
+                }}
+                className="block ml-auto mt-2 text-white w-full bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center"
+              >
+                Next
+              </button>
+            </>
+          )}
+          {inputPageIndex === 1 && (
+            <>
+              <div className="md:flex gap-5">
+                <AddEducation
+                  schoolName={schoolName}
+                  setSchoolName={setSchoolName}
+                  titleOfStudy={titleOfStudy}
+                  setTitleOfStudy={setTitleOfStudy}
+                  studyDateFrom={studyDateFrom}
+                  setstudyDateFrom={setStudyDateFrom}
+                  studyDateTo={studyDateTo}
+                  setstudyDateTo={setStudyDateTo}
+                />
+              </div>
+              <div className="flex flex-row justify-between">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setInputPageIndex((prev) => prev - 1);
+                  }}
+                  className="mt-2 w-full bg-white border-blue-700 border text-blue-700 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center"
+                >
+                  Prev
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setInputPageIndex((prev) => prev + 1);
+                  }}
+                  className="block ml-auto mt-2 text-white w-full bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center"
+                >
+                  Next
+                </button>
+              </div>
+            </>
+          )}
+          {inputPageIndex === 2 && (
+            <>
+              <div className="md:flex gap-5">
+                <AddExperience
+                  companyName={companyName}
+                  setCompanyName={setCompanyName}
+                  positionAtCompany={positionAtCompany}
+                  setPositionAtCompany={setPositionAtCompany}
+                  responsibilities={responsibilities}
+                  setResponsibilities={setResponsibilities}
+                  companyDateFrom={companyDateFrom}
+                  setCompanyDateFrom={setCompanyDateFrom}
+                  companyDateTo={companyDateTo}
+                  setCompanyDateTo={setCompanyDateTo}
+                />
+              </div>
+              <div className="flex flex-row justify-between">
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setInputPageIndex((prev) => prev - 1);
+                  }}
+                  className="mt-2 w-full bg-white border-blue-700 border text-blue-700 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center"
+                >
+                  Prev
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsFormOpen(false);
+                    setInputPageIndex(() => 0);
+                  }}
+                  className="block ml-auto mt-2 text-white w-full bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center"
+                >
+                  Submit
+                </button>
+              </div>
+            </>
+          )}
+          <div className="flex justify-center">
+            <button
+              className={`${
+                inputPageIndex === 0
+                  ? "bg-orange-400 text-white"
+                  : "bg-white text-orange-400"
+              } rounded-full border border-orange-400 px-4 py-2 m-4`}
+            >
+              1
+            </button>
+            <button
+              className={`${
+                inputPageIndex === 1
+                  ? "bg-orange-400 text-white"
+                  : "bg-white text-orange-400"
+              } rounded-full border border-orange-400 px-4 py-2 m-4`}
+            >
+              2
+            </button>
+            <button
+              className={`${
+                inputPageIndex === 2
+                  ? "bg-orange-400 text-white"
+                  : "bg-white text-orange-400"
+              } rounded-full border border-orange-400 px-4 py-2 m-4`}
+            >
+              3
+            </button>
           </div>
-
-          <button
-            type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              setIsFormOpen(false);
-            }}
-            className="col-span-3 text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-md sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Submit
-          </button>
         </AddInfoForm>
       )}
       {!isFormOpen && (
