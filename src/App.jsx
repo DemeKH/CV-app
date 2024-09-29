@@ -60,7 +60,15 @@ function App() {
           )}
           {inputPageIndex === 1 && (
             <>
-              <div className="md:flex gap-5">
+              <div
+                className="md:flex gap-5"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    setInputPageIndex((prev) => prev + 1);
+                  }
+                }}
+              >
                 <AddEducation
                   schoolName={schoolName}
                   setSchoolName={setSchoolName}
@@ -96,7 +104,16 @@ function App() {
           )}
           {inputPageIndex === 2 && (
             <>
-              <div className="md:flex gap-5">
+              <div
+                className="md:flex gap-5"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    setIsFormOpen(false);
+                    setInputPageIndex(0);
+                  }
+                }}
+              >
                 <AddExperience
                   companyName={companyName}
                   setCompanyName={setCompanyName}

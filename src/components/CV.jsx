@@ -35,7 +35,6 @@ const CV = ({
             )}
           </div>
         </div>
-
         <div className="m-4">
           <h3 className="bg-gray-50 text-center font-medium">Education</h3>
           <ul className="p-2 list-disc font-medium">
