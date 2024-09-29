@@ -72,7 +72,7 @@ function App() {
                   setstudyDateTo={setStudyDateTo}
                 />
               </div>
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between gap-5">
                 <button
                   onClick={(e) => {
                     e.preventDefault();
@@ -110,7 +110,7 @@ function App() {
                   setCompanyDateTo={setCompanyDateTo}
                 />
               </div>
-              <div className="flex flex-row justify-between">
+              <div className="flex flex-row justify-between gap-5">
                 <button
                   onClick={(e) => {
                     e.preventDefault();
